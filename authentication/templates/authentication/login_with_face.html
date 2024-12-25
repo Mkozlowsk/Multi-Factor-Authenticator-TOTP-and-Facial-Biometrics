@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Login</title>
+</head>
+<body>
+    <h1>Face Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Login</button>
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>

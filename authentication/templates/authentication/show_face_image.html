@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokazanie obrazu twarzy</title>
+</head>
+<body>
+    <h1>Obraz twarzy</h1>
+    <!-- Wyświetlenie obrazu twarzy -->
+    <img src="data:image/jpeg;base64,{{ face_encoding }}" alt="Face Image">
+
+    <!-- Formularz do zapisywania lub ponownej próby -->
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="save">Save</button>
+        <button type="submit" name="retry">Retry</button>
+    </form>
+</body>
+</html>
